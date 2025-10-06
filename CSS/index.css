@@ -404,7 +404,6 @@ hr {
 
 .after-location {
     font-size: 27px;
-    width: 600px;
 }
 
 .duration {
@@ -614,6 +613,7 @@ strong {
   .rotate {
     transform: rotate(180deg);
 }
+
 
 
 
