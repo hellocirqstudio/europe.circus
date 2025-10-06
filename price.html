@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/price.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>TARIFS</title>
+</head>
+<body>
+
+    <div class="hero-section">
+        <h1 class="main-title">Tarifs</h1>
+        <p class="subtitle">Découvrez la magie du cirque en famille</p>
+    </div>
+
+    <!--<div class="schedule-section">
+        <h2>Horaires des Représentations</h2>
+        <div class="schedule-grid">
+            <div class="schedule-card">
+                <h3>Mercredi</h3>
+                <p class="time">15h00</p>
+            </div>
+            <div class="schedule-card">
+                <h3>Samedi</h3>
+                <p class="time">14h30 & 20h00</p>
+                <div class="tag">Double Séance</div>
+            </div>
+            <div class="schedule-card">
+                <h3>Dimanche</h3>
+                <p class="time">15h00</p>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="pricing-section">
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div class="price-header">
+                    <h3>Gradins</h3>
+                    <p class="price">10€</p>
+                </div>
+                <ul class="features">
+                    <li>Vue panoramique</li>
+                    <li>Places assises confortables</li>
+                </ul>
+            </div>
+            
+            <div class="price-card featured">
+                <div class="price-header">
+                    <h3>Loges</h3>
+                    <p class="price">15€</p>
+                    <div class="best-value">Meilleur choix</div>
+                </div>
+                <ul class="features">
+                    <li>Au plus proche de la piste</li>
+                    <li>Places assises premium</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <h3>Tarifs Spéciaux</h3>
+            <ul>
+                <li>Enfants (-12 ans) : -5€</li>
+                <li>Groupes (10+) : -10%</li>
+                <li>Écoles : Tarifs sur demande</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h3>Informations Pratiques</h3>
+            <ul>
+                <li>Ouverture des portes 1h avant</li>
+                <li>Parking gratuit</li>
+                <li>Snack et boissons sur place</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Animation au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.schedule-card, .price-card, .info-card').forEach(card => {
+                card.classList.add('fade-in');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
